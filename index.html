@@ -1,0 +1,701 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>For Gozaloy</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600;700&amp;family=Quicksand:wght@400;500;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "background": "#fefccf",
+                      "tertiary-container": "#ffcdd4",
+                      "surface-container-low": "#f8f6c9",
+                      "tertiary": "#874e58",
+                      "surface-tint": "#705d00",
+                      "on-tertiary-fixed": "#360c17",
+                      "on-secondary": "#ffffff",
+                      "secondary-container": "#ffbf00",
+                      "surface-container-lowest": "#ffffff",
+                      "on-tertiary-fixed-variant": "#6b3741",
+                      "surface-dim": "#dedcb1",
+                      "on-primary-fixed-variant": "#544600",
+                      "on-secondary-fixed": "#261a00",
+                      "primary-fixed": "#ffe16d",
+                      "primary-fixed-dim": "#e9c400",
+                      "on-tertiary": "#ffffff",
+                      "on-error-container": "#93000a",
+                      "secondary": "#795900",
+                      "on-primary-fixed": "#221b00",
+                      "surface-container": "#f2f0c4",
+                      "surface-variant": "#e6e5b9",
+                      "surface": "#fefccf",
+                      "primary-container": "#ffd700",
+                      "on-secondary-container": "#6d5000",
+                      "inverse-primary": "#e9c400",
+                      "primary": "#705d00",
+                      "tertiary-fixed-dim": "#fcb3be",
+                      "on-surface": "#1d1d03",
+                      "secondary-fixed-dim": "#fbbc00",
+                      "on-secondary-fixed-variant": "#5c4300",
+                      "error": "#ba1a1a",
+                      "on-primary": "#ffffff",
+                      "inverse-surface": "#323214",
+                      "tertiary-fixed": "#ffd9de",
+                      "outline-variant": "#d0c6ab",
+                      "on-error": "#ffffff",
+                      "on-primary-container": "#705e00",
+                      "surface-container-highest": "#e6e5b9",
+                      "secondary-fixed": "#ffdfa0",
+                      "error-container": "#ffdad6",
+                      "surface-bright": "#fefccf",
+                      "on-tertiary-container": "#874e58",
+                      "on-surface-variant": "#4d4732",
+                      "surface-container-high": "#eceabe",
+                      "outline": "#7e775f",
+                      "inverse-on-surface": "#f5f3c7",
+                      "on-background": "#1d1d03"
+              },
+              "borderRadius": {
+                      "DEFAULT": "1rem",
+                      "lg": "2rem",
+                      "xl": "3rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "unit": "8px",
+                      "section-gap-sm": "40px",
+                      "gutter": "16px",
+                      "section-gap-lg": "80px",
+                      "container-margin": "24px"
+              },
+              "fontFamily": {
+                      "headline-md-mobile": [
+                              "comfortaa"
+                      ],
+                      "label-md": [
+                              "quicksand"
+                      ],
+                      "display-lg-mobile": [
+                              "comfortaa"
+                      ],
+                      "headline-md": [
+                              "comfortaa"
+                      ],
+                      "display-lg": [
+                              "comfortaa"
+                      ],
+                      "title-lg": [
+                              "comfortaa"
+                      ],
+                      "body-lg": [
+                              "quicksand"
+                      ],
+                      "body-md": [
+                              "quicksand"
+                      ]
+              },
+              "fontSize": {
+                      "headline-md-mobile": [
+                              "24px",
+                              {
+                                      "lineHeight": "1.3",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "label-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "display-lg-mobile": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-md": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.3",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "display-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "title-lg": [
+                              "20px",
+                              {
+                                      "lineHeight": "1.4",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "500"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+    </script>
+<style>
+        .glowing-moon {
+            filter: drop-shadow(0 0 20px rgba(255, 215, 0, 0.6));
+            animation: pulse-glow 3s infinite alternate;
+        }
+        @keyframes pulse-glow {
+            0% { filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.4)); transform: scale(0.98); }
+            100% { filter: drop-shadow(0 0 30px rgba(255, 215, 0, 0.8)); transform: scale(1.02); }
+        }
+        
+        .heart-button {
+            clip-path: path('M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z');
+            /* Approximate heart shape for CSS clip-path if needed, but using standard styling is safer for text content */
+        }
+        
+        .soft-card {
+            box-shadow: 0 10px 40px -10px rgba(255, 191, 0, 0.15);
+            transition: all 0.3s ease;
+        }
+        .soft-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 50px -15px rgba(255, 191, 0, 0.25);
+        }
+
+        /* Raining hearts animation */
+        .hearts-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            pointer-events: none;
+            z-index: 10;
+        }
+        
+        .falling-heart {
+            position: absolute;
+            top: -50px;
+            color: #ffcdd4;
+            font-size: 24px;
+            animation: fall linear infinite;
+        }
+        
+        @keyframes fall {
+            to {
+                transform: translateY(100vh) rotate(360deg);
+            }
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background text-on-surface font-body-md overflow-x-hidden min-h-screen pb-24">
+<!-- Floating Music Toggle -->
+<button class="fixed top-gutter right-gutter z-50 w-12 h-12 rounded-full bg-secondary-container text-on-secondary-container shadow-[0_4px_20px_0_rgba(255,191,0,0.3)] flex items-center justify-center hover:scale-105 transition-transform duration-300 mt-6">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">music_note</span>
+</button>
+<!-- Top Navigation (Desktop) -->
+<header class="hidden md:flex justify-between items-center px-gutter py-unit w-full max-w-7xl mx-auto bg-background dark:bg-background sticky top-0 z-40 shadow-[0_4px_20px_0_rgba(255,191,0,0.05)]">
+<div class="flex items-center gap-2 text-secondary">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">favorite</span>
+<span class="font-headline-md text-headline-md text-secondary">Gozaloy</span>
+</div>
+<nav class="flex gap-8">
+<a class="text-primary font-label-md text-label-md hover:scale-105 transition-transform duration-300 flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-sm">favorite</span> Love
+            </a>
+<a class="text-on-surface-variant font-label-md text-label-md hover:scale-105 transition-transform duration-300 flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-sm">auto_awesome</span> Gallery
+            </a>
+<a class="text-on-surface-variant font-label-md text-label-md hover:scale-105 transition-transform duration-300 flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-sm">auto_stories</span> Notes
+            </a>
+<a class="text-on-surface-variant font-label-md text-label-md hover:scale-105 transition-transform duration-300 flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-sm">loyalty</span> Memories
+            </a>
+</nav>
+</header>
+<main class="w-full">
+<!-- Section 1: Hero -->
+<section class="relative w-full h-[707px] min-h-[600px] flex flex-col items-center justify-center overflow-hidden px-gutter">
+<!-- Shader Background -->
+<div class="absolute inset-0 z-0">
+<!-- STITCH_SHADER_START:ANIMATION_1 class="absolute inset-0 w-full h-full opacity-60 mix-blend-soft-light" -->
+<div class="absolute inset-0 w-full h-full opacity-60 mix-blend-soft-light" style="display:block;">
+<canvas id="shader-canvas-ANIMATION_1" style="display:block;width:100%;height:100%" width="390" height="707"></canvas>
+<script>
+(function() {
+  const canvas = document.getElementById('shader-canvas-ANIMATION_1');
+
+  // Sync the WebGL drawing-buffer size with the CSS-driven layout size.
+  // This fires on initial layout and whenever the element is resized.
+  function syncSize() {
+    const w = canvas.clientWidth  || 1280;
+    const h = canvas.clientHeight || 720;
+    if (canvas.width !== w || canvas.height !== h) {
+      canvas.width  = w;
+      canvas.height = h;
+    }
+  }
+  if (typeof ResizeObserver !== 'undefined') {
+    new ResizeObserver(syncSize).observe(canvas);
+  }
+  syncSize();
+
+  const gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+  if (!gl) return;
+  const vs = `attribute vec2 a_position;
+varying vec2 v_texCoord;
+void main() {
+  v_texCoord = a_position * 0.5 + 0.5;
+  gl_Position = vec4(a_position, 0.0, 1.0);
+}`;
+  const fs = `precision highp float;
+varying vec2 v_texCoord;
+uniform float u_time;
+uniform vec2 u_resolution;
+uniform vec2 u_mouse;
+
+// Simple noise function
+float hash(vec2 p) {
+    p = fract(p * vec2(123.34, 456.21));
+    p += dot(p, p + 45.32);
+    return fract(p.x * p.y);
+}
+
+float noise(vec2 p) {
+    vec2 i = floor(p);
+    vec2 f = fract(p);
+    float a = hash(i);
+    float b = hash(i + vec2(1.0, 0.0));
+    float c = hash(i + vec2(0.0, 1.0));
+    float d = hash(i + vec2(1.0, 1.0));
+    vec2 u = f * f * (3.0 - 2.0 * f);
+    return mix(a, b, u.x) + (c - a) * u.y * (1.0 - u.x) + (d - b) * u.x * u.y;
+}
+
+void main() {
+    vec2 uv = v_texCoord;
+    
+    // Warm golden gradient background
+    vec3 color1 = vec3(1.0, 0.95, 0.8); // Light Cream
+    vec3 color2 = vec3(1.0, 0.84, 0.0); // Gold
+    vec3 color3 = vec3(1.0, 0.75, 0.2); // Warm Amber
+    
+    float n = noise(uv * 3.0 + u_time * 0.2);
+    vec3 finalColor = mix(color1, color2, uv.y + n * 0.2);
+    finalColor = mix(finalColor, color3, (1.0 - uv.x) * 0.3);
+
+    // Subtle twinkling stars
+    float starNoise = hash(uv * 50.0 + floor(u_time * 5.0));
+    if (starNoise > 0.995) {
+        finalColor += vec3(1.0, 1.0, 0.9) * 0.5;
+    }
+
+    gl_FragColor = vec4(finalColor, 1.0);
+}`;
+  function cs(type, src) {
+    const s = gl.createShader(type);
+    gl.shaderSource(s, src);
+    gl.compileShader(s);
+    return s;
+  }
+  const prog = gl.createProgram();
+  gl.attachShader(prog, cs(gl.VERTEX_SHADER, vs));
+  gl.attachShader(prog, cs(gl.FRAGMENT_SHADER, fs));
+  gl.linkProgram(prog);
+  gl.useProgram(prog);
+  const buf = gl.createBuffer();
+  gl.bindBuffer(gl.ARRAY_BUFFER, buf);
+  gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1,-1, 1,-1, -1,1, 1,1]), gl.STATIC_DRAW);
+  const pos = gl.getAttribLocation(prog, 'a_position');
+  gl.enableVertexAttribArray(pos);
+  gl.vertexAttribPointer(pos, 2, gl.FLOAT, false, 0, 0);
+  const uTime = gl.getUniformLocation(prog, 'u_time');
+  const uRes = gl.getUniformLocation(prog, 'u_resolution');
+  const uMouse = gl.getUniformLocation(prog, 'u_mouse');
+
+  // u_mouse is in pixel coordinates matching u_resolution (ShaderToy convention).
+  // Shaders that need normalized coords should use: u_mouse / u_resolution.
+  let mouse = { x: canvas.width / 2, y: canvas.height / 2 };
+  window.addEventListener('mousemove', (event) => {
+    const rect = canvas.getBoundingClientRect();
+    if (rect.width && rect.height) {
+      const nx = (event.clientX - rect.left) / rect.width;
+      const ny = 1.0 - (event.clientY - rect.top) / rect.height;
+      mouse.x = nx * canvas.width;
+      mouse.y = ny * canvas.height;
+    }
+  });
+
+  function render(t) {
+    if (typeof ResizeObserver === 'undefined') syncSize();
+    gl.viewport(0, 0, canvas.width, canvas.height);
+    if (uTime) gl.uniform1f(uTime, t * 0.001);
+    if (uRes) gl.uniform2f(uRes, canvas.width, canvas.height);
+    if (uMouse) gl.uniform2f(uMouse, mouse.x, mouse.y);
+    gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
+    requestAnimationFrame(render);
+  }
+  render(0);
+})();
+</script>
+</div>
+<!-- STITCH_SHADER_END:ANIMATION_1 -->
+</div>
+<div class="relative z-10 flex flex-col items-center text-center space-y-8 max-w-3xl mx-auto mt-12 md:mt-0">
+<div class="w-32 h-32 md:w-48 md:h-48 mb-4"><div class="absolute -top-4 -right-4 animate-pulse text-secondary-container"><span class="material-symbols-outlined text-xl">sparkles</span></div><div class="absolute -bottom-2 -left-6 animate-pulse text-tertiary-container" style="animation-delay: 1s;"><span class="material-symbols-outlined text-lg">star</span></div>
+<span class="material-symbols-outlined text-primary-container glowing-moon text-[120px] md:text-[180px]" style="font-variation-settings: 'FILL' 1;">dark_mode</span>
+</div>
+<h1 class="font-display-lg-mobile text-display-lg-mobile md:font-display-lg md:text-display-lg text-primary leading-tight">
+                    For Gozaloy <span class="text-secondary-container">💛</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl mx-auto opacity-90">
+                    A digital space crafted with luminous warmth and quiet affection. Just for you.
+                </p><p class="font-body-md text-body-md text-on-surface-variant max-w-lg mx-auto mt-4 opacity-80 italic">Eres mi luna en las noches más oscuras y mi sol en cada amanecer. Este pequeño rincón digital es solo una muestra de cuánto te quiero.</p>
+<button class="px-8 py-4 bg-secondary-container text-on-secondary-container rounded-full font-label-md text-label-md flex items-center gap-2 shadow-[0_10px_30px_0_rgba(255,191,0,0.3)] hover:scale-[1.02] transition-transform duration-300 relative group overflow-hidden mt-6">
+<div class="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out"></div>
+<span class="material-symbols-outlined relative z-10 text-xl" style="font-variation-settings: 'FILL' 1;">favorite</span>
+<span class="relative z-10">Scroll for Love</span>
+</button>
+</div>
+<!-- Floating atmospheric elements -->
+<div class="absolute top-1/4 left-10 md:left-20 animate-pulse" style="animation-duration: 4s;">
+<span class="material-symbols-outlined text-tertiary-container text-3xl" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+</div>
+<div class="absolute bottom-1/4 right-10 md:right-32 animate-pulse" style="animation-duration: 5s;">
+<span class="material-symbols-outlined text-primary-container text-4xl" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</section>
+<!-- Section 2: Reasons Why -->
+<section class="py-section-gap-lg px-gutter max-w-7xl mx-auto">
+<div class="text-center mb-12">
+<span class="material-symbols-outlined text-tertiary text-4xl mb-4" style="font-variation-settings: 'FILL' 1;">favorite_border</span>
+<h2 class="font-headline-md-mobile text-headline-md-mobile md:font-headline-md md:text-headline-md text-secondary">A Few Little Things</h2>
+<div class="w-16 h-1 bg-tertiary-container mx-auto mt-6 rounded-full"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-container-margin">
+<!-- Card 1 -->
+<div class="soft-card bg-surface-container-lowest rounded-xl p-8 border border-tertiary-container/30 relative overflow-hidden group">
+<div class="absolute -right-4 -top-4 w-24 h-24 bg-primary-container/10 rounded-full blur-xl group-hover:bg-primary-container/20 transition-colors"></div>
+<div class="relative z-10 flex flex-col items-center text-center">
+<div class="w-16 h-16 rounded-full bg-surface-container-low flex items-center justify-center mb-6 text-primary border border-secondary-container/50">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">sentiment_satisfied</span>
+</div>
+<h3 class="font-title-lg text-title-lg text-secondary mb-3">Your smile</h3>
+<p class="text-on-surface-variant font-body-md text-body-md opacity-80">
+                            It lights up the darkest rooms and makes everything feel instantly warmer.
+                        </p>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="soft-card bg-surface-container-lowest rounded-xl p-8 border border-tertiary-container/30 relative overflow-hidden group">
+<div class="absolute -left-4 -bottom-4 w-32 h-32 bg-tertiary-container/20 rounded-full blur-xl group-hover:bg-tertiary-container/30 transition-colors"></div>
+<div class="relative z-10 flex flex-col items-center text-center">
+<div class="w-16 h-16 rounded-full bg-surface-container-low flex items-center justify-center mb-6 text-tertiary border border-secondary-container/50">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">nights_stay</span>
+</div>
+<h3 class="font-title-lg text-title-lg text-secondary mb-3">Our late night talks</h3>
+<p class="text-on-surface-variant font-body-md text-body-md opacity-80">
+                            When the world goes quiet and it's just us sharing dreams until morning.
+                        </p>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="soft-card bg-surface-container-lowest rounded-xl p-8 border border-tertiary-container/30 relative overflow-hidden group">
+<div class="absolute right-1/2 top-1/2 -translate-y-1/2 translate-x-1/2 w-28 h-28 bg-secondary-fixed/20 rounded-full blur-xl group-hover:bg-secondary-fixed/30 transition-colors"></div>
+<div class="relative z-10 flex flex-col items-center text-center">
+<div class="w-16 h-16 rounded-full bg-surface-container-low flex items-center justify-center mb-6 text-primary border border-secondary-container/50">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">volunteer_activism</span>
+</div>
+<h3 class="font-title-lg text-title-lg text-secondary mb-3">Your kind heart</h3>
+<p class="text-on-surface-variant font-body-md text-body-md opacity-80">
+                            The gentle way you treat others and the boundless empathy you hold.
+                        </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 3: K-Pop Zone -->
+<section class="my-section-gap-sm mx-gutter md:mx-auto max-w-6xl bg-tertiary-fixed/30 rounded-[3rem] p-8 md:p-16 relative overflow-hidden">
+<!-- Decorative sparkles -->
+<div class="absolute top-10 left-10 text-tertiary-container opacity-60">
+<span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+</div>
+<div class="absolute bottom-10 right-10 text-tertiary-container opacity-60">
+<span class="material-symbols-outlined text-5xl" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+</div>
+<div class="relative z-10 flex flex-col items-center">
+<div class="w-20 h-20 bg-white/50 backdrop-blur-sm rounded-full flex items-center justify-center mb-6 shadow-sm border border-white/40">
+<span class="material-symbols-outlined text-tertiary text-4xl" style="font-variation-settings: 'FILL' 1;">celebration</span>
+</div>
+<h2 class="font-headline-md-mobile text-headline-md-mobile md:font-headline-md md:text-headline-md text-on-tertiary-container mb-12 text-center">
+                    Vibe Central ✧
+                </h2>
+<div class="w-full grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl">
+<div class="bg-white/60 backdrop-blur-md rounded-2xl p-6 flex items-center gap-6 border border-white/50 shadow-[0_8px_30px_rgb(0,0,0,0.04)]">
+<div class="w-14 h-14 bg-tertiary-container text-on-tertiary-container rounded-full flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">headphones</span>
+</div>
+<div>
+<span class="inline-block px-3 py-1 bg-tertiary/10 text-tertiary rounded-full font-label-md text-[10px] mb-2">Favorite Tracks</span>
+<h4 class="font-title-lg text-title-lg text-on-surface mb-1">Playlist 01</h4>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">On repeat forever.</p>
+</div>
+</div>
+<div class="bg-white/60 backdrop-blur-md rounded-2xl p-6 flex items-center gap-6 border border-white/50 shadow-[0_8px_30px_rgb(0,0,0,0.04)]">
+<div class="w-14 h-14 bg-primary-container text-on-primary-container rounded-full flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">graphic_eq</span>
+</div>
+<div>
+<span class="inline-block px-3 py-1 bg-primary/10 text-primary rounded-full font-label-md text-[10px] mb-2">Current Obsession</span>
+<h4 class="font-title-lg text-title-lg text-on-surface mb-1">Night Drive</h4>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">Vibes for the soul.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 4: Closing -->
+<section class="relative w-full py-section-gap-lg px-gutter min-h-[500px] flex flex-col items-center justify-center overflow-hidden">
+<!-- Shader Background -->
+<div class="absolute inset-0 z-0">
+<!-- STITCH_SHADER_START:ANIMATION_1 class="absolute inset-0 w-full h-full opacity-40 mix-blend-multiply" -->
+<div class="absolute inset-0 w-full h-full opacity-40 mix-blend-multiply" style="display:block;">
+<canvas id="shader-canvas-ANIMATION_1" style="display:block;width:100%;height:100%"></canvas>
+<script>
+(function() {
+  const canvas = document.getElementById('shader-canvas-ANIMATION_1');
+
+  // Sync the WebGL drawing-buffer size with the CSS-driven layout size.
+  // This fires on initial layout and whenever the element is resized.
+  function syncSize() {
+    const w = canvas.clientWidth  || 1280;
+    const h = canvas.clientHeight || 720;
+    if (canvas.width !== w || canvas.height !== h) {
+      canvas.width  = w;
+      canvas.height = h;
+    }
+  }
+  if (typeof ResizeObserver !== 'undefined') {
+    new ResizeObserver(syncSize).observe(canvas);
+  }
+  syncSize();
+
+  const gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+  if (!gl) return;
+  const vs = `attribute vec2 a_position;
+varying vec2 v_texCoord;
+void main() {
+  v_texCoord = a_position * 0.5 + 0.5;
+  gl_Position = vec4(a_position, 0.0, 1.0);
+}`;
+  const fs = `precision highp float;
+varying vec2 v_texCoord;
+uniform float u_time;
+uniform vec2 u_resolution;
+uniform vec2 u_mouse;
+
+// Simple noise function
+float hash(vec2 p) {
+    p = fract(p * vec2(123.34, 456.21));
+    p += dot(p, p + 45.32);
+    return fract(p.x * p.y);
+}
+
+float noise(vec2 p) {
+    vec2 i = floor(p);
+    vec2 f = fract(p);
+    float a = hash(i);
+    float b = hash(i + vec2(1.0, 0.0));
+    float c = hash(i + vec2(0.0, 1.0));
+    float d = hash(i + vec2(1.0, 1.0));
+    vec2 u = f * f * (3.0 - 2.0 * f);
+    return mix(a, b, u.x) + (c - a) * u.y * (1.0 - u.x) + (d - b) * u.x * u.y;
+}
+
+void main() {
+    vec2 uv = v_texCoord;
+    
+    // Warm golden gradient background
+    vec3 color1 = vec3(1.0, 0.95, 0.8); // Light Cream
+    vec3 color2 = vec3(1.0, 0.84, 0.0); // Gold
+    vec3 color3 = vec3(1.0, 0.75, 0.2); // Warm Amber
+    
+    float n = noise(uv * 3.0 + u_time * 0.2);
+    vec3 finalColor = mix(color1, color2, uv.y + n * 0.2);
+    finalColor = mix(finalColor, color3, (1.0 - uv.x) * 0.3);
+
+    // Subtle twinkling stars
+    float starNoise = hash(uv * 50.0 + floor(u_time * 5.0));
+    if (starNoise > 0.995) {
+        finalColor += vec3(1.0, 1.0, 0.9) * 0.5;
+    }
+
+    gl_FragColor = vec4(finalColor, 1.0);
+}`;
+  function cs(type, src) {
+    const s = gl.createShader(type);
+    gl.shaderSource(s, src);
+    gl.compileShader(s);
+    return s;
+  }
+  const prog = gl.createProgram();
+  gl.attachShader(prog, cs(gl.VERTEX_SHADER, vs));
+  gl.attachShader(prog, cs(gl.FRAGMENT_SHADER, fs));
+  gl.linkProgram(prog);
+  gl.useProgram(prog);
+  const buf = gl.createBuffer();
+  gl.bindBuffer(gl.ARRAY_BUFFER, buf);
+  gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1,-1, 1,-1, -1,1, 1,1]), gl.STATIC_DRAW);
+  const pos = gl.getAttribLocation(prog, 'a_position');
+  gl.enableVertexAttribArray(pos);
+  gl.vertexAttribPointer(pos, 2, gl.FLOAT, false, 0, 0);
+  const uTime = gl.getUniformLocation(prog, 'u_time');
+  const uRes = gl.getUniformLocation(prog, 'u_resolution');
+  const uMouse = gl.getUniformLocation(prog, 'u_mouse');
+
+  // u_mouse is in pixel coordinates matching u_resolution (ShaderToy convention).
+  // Shaders that need normalized coords should use: u_mouse / u_resolution.
+  let mouse = { x: canvas.width / 2, y: canvas.height / 2 };
+  window.addEventListener('mousemove', (event) => {
+    const rect = canvas.getBoundingClientRect();
+    if (rect.width && rect.height) {
+      const nx = (event.clientX - rect.left) / rect.width;
+      const ny = 1.0 - (event.clientY - rect.top) / rect.height;
+      mouse.x = nx * canvas.width;
+      mouse.y = ny * canvas.height;
+    }
+  });
+
+  function render(t) {
+    if (typeof ResizeObserver === 'undefined') syncSize();
+    gl.viewport(0, 0, canvas.width, canvas.height);
+    if (uTime) gl.uniform1f(uTime, t * 0.001);
+    if (uRes) gl.uniform2f(uRes, canvas.width, canvas.height);
+    if (uMouse) gl.uniform2f(uMouse, mouse.x, mouse.y);
+    gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
+    requestAnimationFrame(render);
+  }
+  render(0);
+})();
+</script>
+</div>
+<!-- STITCH_SHADER_END:ANIMATION_1 -->
+</div>
+<!-- Hearts Animation Container -->
+<div class="hearts-container" id="hearts-container">
+<!-- Hearts will be injected via JS -->
+<span class="material-symbols-outlined falling-heart" style="font-variation-settings: &quot;FILL&quot; 1; color: rgb(255, 191, 0); left: 9.31419%; animation-duration: 8.58958s; animation-delay: 3.28895s; font-size: 30.7533px; opacity: 0.729529;">volunteer_activism</span><span class="material-symbols-outlined falling-heart" style="left: 67.0462%; animation-duration: 7.96998s; animation-delay: 4.71168s; font-size: 17.4197px; opacity: 0.70173;">favorite_border</span><span class="material-symbols-outlined falling-heart" style="color: rgb(255, 191, 0); left: 70.9165%; animation-duration: 6.45091s; animation-delay: 0.824417s; font-size: 17.3178px; opacity: 0.436271;">favorite_border</span><span class="material-symbols-outlined falling-heart" style="font-variation-settings: &quot;FILL&quot; 1; left: 27.1704%; animation-duration: 6.10804s; animation-delay: 1.413s; font-size: 28.449px; opacity: 0.688298;">volunteer_activism</span><span class="material-symbols-outlined falling-heart" style="font-variation-settings: &quot;FILL&quot; 1; color: rgb(255, 191, 0); left: 88.2798%; animation-duration: 9.05592s; animation-delay: 1.73558s; font-size: 22.2789px; opacity: 0.437015;">favorite</span><span class="material-symbols-outlined falling-heart" style="left: 45.4591%; animation-duration: 7.08678s; animation-delay: 4.25495s; font-size: 17.877px; opacity: 0.560103;">favorite_border</span><span class="material-symbols-outlined falling-heart" style="font-variation-settings: &quot;FILL&quot; 1; left: 33.9049%; animation-duration: 7.66998s; animation-delay: 1.97302s; font-size: 29.5232px; opacity: 0.497983;">favorite</span><span class="material-symbols-outlined falling-heart" style="font-variation-settings: &quot;FILL&quot; 1; left: 1.0391%; animation-duration: 7.78227s; animation-delay: 4.48123s; font-size: 18.0448px; opacity: 0.784217;">volunteer_activism</span><span class="material-symbols-outlined falling-heart" style="font-variation-settings: &quot;FILL&quot; 1; color: rgb(255, 191, 0); left: 64.6103%; animation-duration: 8.53987s; animation-delay: 4.88107s; font-size: 16.1872px; opacity: 0.533207;">favorite</span><span class="material-symbols-outlined falling-heart" style="left: 75.646%; animation-duration: 8.46716s; animation-delay: 3.98025s; font-size: 27.7345px; opacity: 0.310158;">favorite_border</span><span class="material-symbols-outlined falling-heart" style="font-variation-settings: &quot;FILL&quot; 1; left: 48.3943%; animation-duration: 9.46304s; animation-delay: 1.16511s; font-size: 28.9724px; opacity: 0.516924;">volunteer_activism</span><span class="material-symbols-outlined falling-heart" style="font-variation-settings: &quot;FILL&quot; 1; left: 59.0333%; animation-duration: 8.95498s; animation-delay: 0.13049s; font-size: 28.7921px; opacity: 0.415064;">volunteer_activism</span><span class="material-symbols-outlined falling-heart" style="font-variation-settings: &quot;FILL&quot; 1; left: 60.1914%; animation-duration: 6.41205s; animation-delay: 0.969489s; font-size: 20.4167px; opacity: 0.377428;">favorite</span><span class="material-symbols-outlined falling-heart" style="left: 60.1254%; animation-duration: 8.0967s; animation-delay: 3.43339s; font-size: 29.6593px; opacity: 0.441229;">favorite_border</span><span class="material-symbols-outlined falling-heart" style="font-variation-settings: &quot;FILL&quot; 1; left: 61.8686%; animation-duration: 6.89906s; animation-delay: 4.656s; font-size: 31.7319px; opacity: 0.42793;">favorite</span></div>
+<div class="relative z-10 flex flex-col items-center text-center">
+<div class="mb-8">
+<span class="material-symbols-outlined text-secondary-container glowing-moon text-[100px]" style="font-variation-settings: 'FILL' 1;">bedtime</span>
+</div>
+<h2 class="font-display-lg-mobile text-display-lg-mobile md:font-display-lg md:text-display-lg text-primary mb-4 max-w-2xl">
+                    I Love You to the Moon and Back
+                </h2>
+<div class="flex gap-2 mt-6">
+<span class="material-symbols-outlined text-tertiary-container text-2xl" style="font-variation-settings: 'FILL' 1;">favorite</span>
+<span class="material-symbols-outlined text-tertiary-container text-2xl" style="font-variation-settings: 'FILL' 1;">favorite</span>
+<span class="material-symbols-outlined text-tertiary-container text-2xl" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation (Mobile) -->
+<nav class="md:hidden bg-surface-container-low/80 backdrop-blur-md dark:bg-surface-container-low/80 rounded-t-xl shadow-[0_-4px_30px_0_rgba(255,191,0,0.1)] fixed bottom-0 w-full z-50 flex justify-around items-center px-4 py-3 pb-6">
+<!-- Active Tab: Love -->
+<a class="flex flex-col items-center justify-center bg-secondary-container text-on-secondary-container rounded-full px-4 py-1.5 hover:scale-110 transition-transform duration-300" href="#">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 1;">favorite</span>
+<span class="font-label-md text-label-md">Love</span>
+</a>
+<!-- Inactive Tabs -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-primary-container/20 px-4 py-1.5 rounded-full transition-colors" href="#">
+<span class="material-symbols-outlined mb-1 text-on-surface-variant">auto_awesome</span>
+<span class="font-label-md text-label-md">Gallery</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-primary-container/20 px-4 py-1.5 rounded-full transition-colors" href="#">
+<span class="material-symbols-outlined mb-1 text-on-surface-variant">auto_stories</span>
+<span class="font-label-md text-label-md">Notes</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-primary-container/20 px-4 py-1.5 rounded-full transition-colors" href="#">
+<span class="material-symbols-outlined mb-1 text-on-surface-variant">loyalty</span>
+<span class="font-label-md text-label-md">Memories</span>
+</a>
+</nav>
+<script>
+        // Simple script to generate falling hearts in the closing section
+        document.addEventListener('DOMContentLoaded', () => {
+            const container = document.getElementById('hearts-container');
+            if(!container) return;
+
+            const heartIcons = ['favorite', 'volunteer_activism', 'favorite_border'];
+            const numHearts = 15;
+
+            for(let i = 0; i < numHearts; i++) {
+                const heart = document.createElement('span');
+                heart.className = 'material-symbols-outlined falling-heart';
+                
+                // Randomize icon
+                const randomIcon = heartIcons[Math.floor(Math.random() * heartIcons.length)];
+                heart.textContent = randomIcon;
+                
+                // Randomize appearance if it's a solid heart
+                if(randomIcon !== 'favorite_border') {
+                    heart.style.fontVariationSettings = "'FILL' 1";
+                }
+
+                // Randomize position, duration, and delay
+                const left = Math.random() * 100;
+                const duration = Math.random() * 5 + 5; // 5-10 seconds
+                const delay = Math.random() * 5; // 0-5 seconds delay
+                const size = Math.random() * 16 + 16; // 16px - 32px
+                
+                // Sometimes use a gold color instead of pink
+                if(Math.random() > 0.7) {
+                    heart.style.color = '#ffbf00'; // secondary-container
+                }
+
+                heart.style.left = `${left}%`;
+                heart.style.animationDuration = `${duration}s`;
+                heart.style.animationDelay = `${delay}s`;
+                heart.style.fontSize = `${size}px`;
+                heart.style.opacity = Math.random() * 0.5 + 0.3;
+
+                container.appendChild(heart);
+            }
+        });
+    </script>
+
+
+</body></html>
